@@ -6,6 +6,7 @@
  ![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/4be7729e-df07-4371-bcbb-166ee6803e2a)
 ### Création d'un nouveau client "wallet-client"
 ![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/6ca607ec-d10a-4afd-b437-ce6af705c47a)
+
 ![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/853857e1-0462-47f5-af8e-0ec1c39e2c9e)
 ### Création de l'utilisateur "user1"
  ![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/887b2ec6-358e-49e1-b2ec-464ea9f128f6)
@@ -18,15 +19,20 @@
 ### Test sur Postman
 - Test 1
    ![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/f2ad0452-d036-402c-9431-b9fcaabf9edf)
+  
   ![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/ad139ad1-929c-4074-9cbd-df1a80329f33)
 - Test 2
 ![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/1d1f17c6-c210-4f29-8b2f-87a1fe15886b)
+
 ![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/56c71cb4-33df-441d-aad8-5440dfaeb2c5)
  - Test 3
 On active l'authentification pour le client puis on effectue un test sur postman avec le secret généré
 ![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/bf37c8f7-f661-402a-9261-2eb4993d1bbd)
+
 ![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/45f31b97-5c66-4bce-b651-932bb568cbd6)
+
 ![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/4e7ba5f6-de5c-4585-9658-2137a1d3d068)
+
 ![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/14f4d831-a531-4242-ab24-4678271d28bc)
 
 ## Partie 2: Sécurisation
@@ -213,7 +219,10 @@ async login(){
     )
     }
 ```
+
 et voila l'application devient sécurisé
+
+
 ![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/25c9b83a-513a-4592-865d-414999482e49)
 
 
