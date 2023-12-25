@@ -1,53 +1,56 @@
-# TP-4Securite-des-Systemes-Distribues
-![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/16d0efc2-5540-4bcf-b456-880f19e78478)
-## Partie 1 : Configuration de l'environnment
- ![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/a5c281c6-4f5c-4a59-aa9f-7fbbc9d233ba)
-### Création d'un nouveau realm "wallet-realm"
- ![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/4be7729e-df07-4371-bcbb-166ee6803e2a)
-### Création d'un nouveau client "wallet-client"
-![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/6ca607ec-d10a-4afd-b437-ce6af705c47a)
+# Activité 4 : Sécurité des systèmes distribuées
 
-![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/853857e1-0462-47f5-af8e-0ec1c39e2c9e)
-### Création de l'utilisateur "user1"
- ![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/887b2ec6-358e-49e1-b2ec-464ea9f128f6)
-### Création de l'utilisateur "taghla2"
-![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/ecdea7ec-6d1c-4b07-8498-ae9a849efd24)
-### Affecter au "user1" le role "USER"
-![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/327fd2cc-9974-4121-892c-404808d313e8)
-### Affecter au "taghla2" leS roles "USER" et "ADMIN"
-![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/3bb31cf6-9146-4045-8af2-4596a725bfde)
-### Test sur Postman
-- Test 1
-   ![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/f2ad0452-d036-402c-9431-b9fcaabf9edf)
-  
-  ![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/ad139ad1-929c-4074-9cbd-df1a80329f33)
-- Test 2
-![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/1d1f17c6-c210-4f29-8b2f-87a1fe15886b)
+## Première partie : configuration de KeyCloak
+Dans le cadre de ce travail pratique, nous explorerons les mécanismes de sécurité offerts par Spring Security, conjugués à l'utilisation de Keycloak, un gestionnaire d'identité open source, pour renforcer la sécurité d'une application développée avec le framework Spring.
+ 
+ ![image](https://github.com/Userkaoutar/Activite4-Securite-des-systemes-distribues/assets/101696114/e21e247c-acde-4613-a1cf-5678d56b73f4)
 
-![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/56c71cb4-33df-441d-aad8-5440dfaeb2c5)
- - Test 3
-On active l'authentification pour le client puis on effectue un test sur postman avec le secret généré
-![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/bf37c8f7-f661-402a-9261-2eb4993d1bbd)
+### Créer un nouveau realm 
+![Capture](https://github.com/Userkaoutar/Activite4-Securite-des-systemes-distribues/assets/101696114/bf3e09aa-018d-483f-9f4b-940011fae97d)
 
-![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/45f31b97-5c66-4bce-b651-932bb568cbd6)
+### Créer un client 
+![Capture2](https://github.com/Userkaoutar/Activite4-Securite-des-systemes-distribues/assets/101696114/284fc82c-4dad-45a1-ab1b-bf14a8447d65)
 
-![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/4e7ba5f6-de5c-4585-9658-2137a1d3d068)
+### Créer un utilisateur
+![Capture3](https://github.com/Userkaoutar/Activite4-Securite-des-systemes-distribues/assets/101696114/2b9593a0-7998-4368-8f68-e7eaac5822f9)
 
-![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/14f4d831-a531-4242-ab24-4678271d28bc)
+### Créer un autre utilisateur
+![Capture4](https://github.com/Userkaoutar/Activite4-Securite-des-systemes-distribues/assets/101696114/344869d0-831a-4bd0-bec6-bae2451c46ef)
 
-## Partie 2: Sécurisation
-### E-Bank
-    1- Configuration "application.properties"
- ```bash
- keycloak.realm=wallet-realm 
-keycloak.resource=wallet-client
-keycloak.bearer-only=true 
-keycloak.auth-server-url=http://Localhost:8080
-keycloak.ssl-required=none
- ```
-  2. Ajouter des dépendances:
+### Créer les roles 'USER' et 'ADMIN'
+![Capture5](https://github.com/Userkaoutar/Activite4-Securite-des-systemes-distribues/assets/101696114/4cffb46f-0a7d-46ff-9ad0-90d507f1c3e3)
+
+### Affecter le role 'USER' au 'user'
+![Capture6](https://github.com/Userkaoutar/Activite4-Securite-des-systemes-distribues/assets/101696114/6b439f81-ef92-4fb9-9b79-cdbdd43b0ea3)
+
+### Affecter les roles 'USER' et 'ADMIN au 'kaoutar'
+![Capture7](https://github.com/Userkaoutar/Activite4-Securite-des-systemes-distribues/assets/101696114/2071519b-8bb5-4c17-a84a-1556709b3669)
+
+### POSTMAN
+dans cette partie on va effectuer un certain nombre de tests sur postman
+- Premier test
+![image](https://github.com/Userkaoutar/Activite4-Securite-des-systemes-distribues/assets/101696114/137bea0d-e921-4419-a3da-bcff9ebeff6f)
+
+![image](https://github.com/Userkaoutar/Activite4-Securite-des-systemes-distribues/assets/101696114/5584a780-b335-4249-9f35-250797b9486c)
+
+![image](https://github.com/Userkaoutar/Activite4-Securite-des-systemes-distribues/assets/101696114/fac5ee03-a328-486d-9af8-1336b35ef50f)
+
+- deuxième test
+Cette fois ci on va effectuer le test à partir du secret client généré
+
+![image](https://github.com/Userkaoutar/Activite4-Securite-des-systemes-distribues/assets/101696114/d63874b0-2134-49a4-aada-c2cb00f0b63a)
+
+![image](https://github.com/Userkaoutar/Activite4-Securite-des-systemes-distribues/assets/101696114/f54b70dd-6f42-4994-9875-c481dc1764d2)
+
+![image](https://github.com/Userkaoutar/Activite4-Securite-des-systemes-distribues/assets/101696114/a4576cdb-7e21-4217-9cab-261d02db2496)
+
+
+## Deuxième partie : Sécuriser une application
+
+Tout d'abord on va sécuriser le Back-End du microservice E-Bank
+1. Commmencant par ajouter les dépendances suivants:
 ```bash
-<dependency>
+   <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
@@ -56,22 +59,20 @@ keycloak.ssl-required=none
 			<artifactId>keycloak-spring-boot-starter</artifactId>
 			<version>19.0.2</version>
 		</dependency>
- ```
- 3. Désactiver le SSL
-    ![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/45cbebe6-2520-4600-8beb-aa886695720a)
-
- 4. Créer le package security avec les deux classses 'KeycloakAdapterConfig' et 'SecurityConfig'
-```bash
-    @Configuration
-public class KeycloakAdapterConfig {
-    @Bean
-    KeycloakSpringBootConfigResolver springBootConfigResolver() {
-        return new KeycloakSpringBootConfigResolver();
-    }
-}
 ```
+2. Ajouter ces lignes de configuration dans 'application.properties'
+
 ```bash
-@KeycloakConfiguration
+keycloak.realm=wallet-realm 
+keycloak.resource=wallet-client
+keycloak.bearer-only=true 
+keycloak.auth-server-url=http://Localhost:8080
+keycloak.ssl-required=none
+```
+3. Créer le package security avec les deux classses 'KeycloakAdapterConfig' et 'SecurityConfig'
+   - SecurityConfig
+```bash
+   @KeycloakConfiguration
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
     @Override
@@ -92,19 +93,70 @@ public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
     }
 }
 ```
- - Revenant vers POSTMAN pour avoir le token JWT
-   ![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/71081f74-92f2-4f42-938e-1fddeb2cb07d)
-   ![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/b270c63e-db7e-4327-9391-04dda66cdf2c)
-   ![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/43965d7d-d0e2-4a19-b09e-7bf387b28276)
+- KeycloakAdapterConfig
+```bash
+      @Configuration
+public class KeycloakAdapterConfig {
+    @Bean
+    KeycloakSpringBootConfigResolver springBootConfigResolver() {
+        return new KeycloakSpringBootConfigResolver();
+    }
+}
+```
+4. Controller
+```bash
+@RestController
+@CrossOrigin("*")
+public class EBankRestController {
+    @Autowired
+    private EBankServiceImpl eBankService;
+    @PostMapping("/currencyTransfer")
+    @PreAuthorize("hasAuthority('ADMIN')")
+    public CurrencyTransferResponse currencyTransfer(@RequestBody NewWalletTransferRequest request){
+        return this.eBankService.newWalletTransaction(request);
+    }
+    @GetMapping("/currencyDeposits")
+    @PreAuthorize("hasAuthority('USER')")
+    public List<CurrencyDeposit> currencyDepositList(){
+        return eBankService.currencyDeposits();
+    }
+}
+```
+#### Effectuer un test
+![image](https://github.com/Userkaoutar/Activite4-Securite-des-systemes-distribues/assets/101696114/2c2dac9f-2438-43e2-933a-e70cfd61d5b8)
 
-  ### Wallet-Service 
-  De meme on va sécuriser le wallet service
-  ### Front-End
-   1. Les dépendances
+![image](https://github.com/Userkaoutar/Activite4-Securite-des-systemes-distribues/assets/101696114/efc311c1-df7a-408b-b4b4-70b745ea9bdb)
+
+#### Partie FrontEnd
 ```bash
 npm install keycloak-angular keycloak-js --force
+```
+- modifier dans app.module.ts
 ```bash
-   2. security.guard.ts
+export function KcFactory(KcService : KeycloakService){
+ return ()=>{
+   KcService.init({
+     config :{
+       realm :"wallet-realm",
+       clientId :"wallet-client",
+       url :"http://localhost:8080"
+     },
+     initOptions : {
+       onLoad :"check-sso",
+       checkLoginIframe: true
+     }
+   })
+ }
+}
+```
+```bash
+providers: [
+    {
+      provide: APP_INITIALIZER, deps :[KeycloakService],useFactory: KcFactory,multi:true
+    }
+  ],
+```
+- créer un fichier security.guard.ts
 ```bash
 import { Injectable } from '@angular/core';
 import {
@@ -149,65 +201,9 @@ export class AuthGuard extends KeycloakAuthGuard {
   }
 }
 ```
-3. app.module.ts
- ```bash
-export function KcFactory(KcService : KeycloakService){
-  return ()=>{
-    KcService.init({
-      config :{
-        realm :"wallet-realm",
-        clientId :"wallet-client",
-        url :"http://localhost:8080"
-      },
-      initOptions : {
-        onLoad :"check-sso",
-        checkLoginIframe: true
-      }
-    })
-  }
-}
-```
+- Aller vers navbar
 ```bash
-providers: [
-    {
-      provide: APP_INITIALIZER, deps :[KeycloakService],useFactory: KcFactory,multi:true
-    }
-  ],
-```
-4. security.service.ts
-  ```bash
-import {Injectable} from "@angular/core";
-import {KeycloakProfile} from "keycloak-js";
-import {KeycloakEventType, KeycloakService} from "keycloak-angular";
-
-@Injectable({providedIn : "root"})
-export class SecurityService {
-  public profile? : KeycloakProfile;
-  constructor (public kcService: KeycloakService) {
-    this.init();
-  }
-  init(){
-    this.kcService.keycloakEvents$.subscribe({
-      next: (e) => {
-        if (e.type == KeycloakEventType.OnAuthSuccess) {
-          this.kcService.loadUserProfile().then(profile=>{
-            this.profile=profile;
-          });
-        }
-      }
-    });
-  }
-  public hasRoleIn(roles:string[]):boolean{
-    let userRoles = this.kcService.getUserRoles();
-    for(let role of roles){
-      if (userRoles.includes(role)) return true;
-    } return false;
-  }
-}
-  ```
-5. navbar.component.ts
-```bash
-   onLogout() {
+     onLogout() {
     this.securityService.kcService.logout(
         window.location.origin
     )
@@ -219,11 +215,36 @@ async login(){
     )
     }
 ```
+- Spécifier les roles dans app.routing.module.ts
+```bash
+const routes: Routes = [
+  {
+    path : "currencies", component : CurrenciesComponent
+  },
+  {
+    path : "continents", component : ContinentsComponent
+  },
+  {
+    path : "wallets", component : WalletsComponent
+  },
+  {
+    path : "transactions/:walletId", component : WalletTransactionsComponent, canActivate : [AuthGuard],
+    data : {roles: ['USER','ADMIN']}
+  },
+  {
+    path : "currencyDeposit", component : CurrencyDepositComponent,
+  }
+];
 
-et voila l'application devient sécurisé
-
-
-![image](https://github.com/Taghla-Ladkhan/TP-4Securite-des-Systemes-Distribues/assets/101521160/25c9b83a-513a-4592-865d-414999482e49)
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+```
+- Résultat de sécurisation
+  ![image](https://github.com/Userkaoutar/Activite4-Securite-des-systemes-distribues/assets/101696114/06d774a3-8136-432f-b7ce-202b7eac15bf)
+  ![image](https://github.com/Userkaoutar/Activite4-Securite-des-systemes-distribues/assets/101696114/c2fdadc0-39f7-43f4-898b-1741e87e895a)
 
 
 
